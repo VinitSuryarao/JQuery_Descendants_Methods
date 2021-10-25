@@ -1,0 +1,49 @@
+<html>
+<head>
+	<title> JQuery Test  </title>
+   <style>
+      #bdy{
+         background-color: palegreen;
+         position: relative;
+         border: 1px solid black;
+      }
+   </style>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script type = "text/javascript">
+
+		    // ready func call when document is ready to render
+         $(document).ready(function() 
+         {     
+               // Children()
+               $('#btnchildren').click(function(){
+                  $('#divA').children().css('color','red');
+               });
+               // Particular Children
+               $('#btnchildrenParti').click(function(){
+                  $('#divA').children("#divC").css('color','Blue');
+               });
+               // find()
+               $('#btnFind').click(function(){
+                  $('#divA').find(".divCclass").css('color','Green');
+               });
+         });
+     </script>
+<head>
+   <body>
+   <div id="divA" style="background-color: palegreen;">
+      <h3> Div A</h3>
+      <div id="divB" style="background-color: rgb(126, 149, 192); position: relative;">
+         <h3> Div B</h3>
+         <div id="divC" class="divCclass" style="background-color: rgb(206, 191, 126);">
+            <h3> Div C</h3>
+            <div id="divD" style="background-color: rgb(145, 207, 145);">
+               <h3> Div D</h3>
+            </div>
+         </div>
+      </div>
+   </div>
+   <button id="btnchildren"> Children </button> 
+   <button id="btnchildrenParti"> Chidren Particular </button> 
+   <button id="btnFind"> Find </button> 
+</body>
+</html>
